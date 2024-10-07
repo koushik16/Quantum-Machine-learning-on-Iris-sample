@@ -1,29 +1,69 @@
-# Quantum Boosting Algorithm for Iris Dataset
+# Machine Learning and Quantum Computing on the Iris Dataset
 
-This project implements a **Quantum Boosting Algorithm** using **Qiskit** and compares its performance against classical boosting methods like **AdaBoost** from **Scikit-learn**. The primary goal is to explore how quantum-enhanced machine learning models can be utilized to improve classification tasks, specifically on the well-known **Iris dataset**.
+This project implements both classical **Machine Learning** techniques and **Quantum Machine Learning** using **Scikit-learn** and **Qiskit**, respectively. The goal is to demonstrate how classical machine learning algorithms can be applied to the **Iris dataset** and explore the use of quantum circuits to enhance machine learning tasks such as feature mapping and classification.
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Dataset Description](#dataset-description)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [Running the Project](#running-the-project)
+- [Classical Machine Learning](#classical-machine-learning)
+  - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
+  - [Train-Test Split](#train-test-split)
+- [Quantum Machine Learning](#quantum-machine-learning)
+  - [Quantum Feature Maps](#quantum-feature-maps)
+  - [Parameterized Quantum Circuits](#parameterized-quantum-circuits)
+  - [Statevector Sampler](#statevector-sampler)
+- [Future Work](#future-work)
+- [License](#license)
 
 ## Project Overview
 
-### Quantum Boosting Algorithm
-In this project, we create weak learners using **parameterized quantum circuits (PQC)**, which are trained iteratively in a boosting framework. These quantum weak learners form the basis of the **Quantum Boosting Algorithm**, which is compared to the classical AdaBoost algorithm.
+The project is divided into two main sections:
 
-The dataset used for this experiment is the **Iris dataset**, but we simplify the problem by converting it into a binary classification problem.
+1. **Classical Machine Learning**:
+   - We use Scikit-learn to preprocess the Iris dataset, reduce dimensionality using Principal Component Analysis (PCA), and set up a train-test split for machine learning model training.
+   - This section is prepared for future machine learning models such as Logistic Regression, Support Vector Machines (SVM), and Decision Trees.
 
-### Key Components:
-- **Quantum Weak Learner**: A parameterized quantum circuit (PQC) is designed for weak classification. Classical data is encoded into quantum states using quantum gates.
-- **Boosting Framework**: Similar to AdaBoost, misclassified samples are given more weight in each iteration, forcing the quantum weak learners to focus more on these samples.
-- **Comparison with Classical AdaBoost**: The accuracy and performance of the quantum boosting algorithm are compared with a classical boosting algorithm from Scikit-learn.
+2. **Quantum Machine Learning**:
+   - Using Qiskit, we introduce quantum-enhanced feature extraction using **Quantum Feature Maps**.
+   - We implement a **Parameterized Quantum Circuit (PQC)** to simulate quantum-enhanced learning and use a **StatevectorSampler** to collect results.
+   - The quantum circuits are explored to understand their potential in machine learning tasks such as classification, offering a foundation for future experiments in quantum-classical hybrid models.
+
+## Dataset Description
+
+The **Iris dataset** is one of the most well-known datasets in machine learning. It consists of 150 samples, each representing an iris flower with four features:
+
+- Sepal length (cm)
+- Sepal width (cm)
+- Petal length (cm)
+- Petal width (cm)
+
+Each sample belongs to one of three species of iris flowers:
+
+1. Setosa
+2. Versicolor
+3. Virginica
+
+The goal is to classify the iris flowers into these three species based on the four features.
+
+## Project Structure
+
+- **Ml_iris.ipynb**: This is the main Jupyter Notebook file containing all the code, including classical machine learning steps and the quantum machine learning experiments.
+- **README.md**: This file, which provides an overview of the project, instructions on running the code, and background on both classical and quantum machine learning approaches.
 
 ## Dependencies
 
-The project requires the following Python libraries:
+To run this project, you will need the following Python libraries:
 
-- `qiskit`: For quantum circuit implementation and simulation.
-- `scikit-learn`: For classical machine learning algorithms (AdaBoost) and dataset handling.
-- `matplotlib`: For visualizations (optional, for circuit visualizations).
-- `numpy`: For handling numerical operations.
+- `qiskit`: For quantum computing, quantum circuit implementation, and running simulations.
+- `scikit-learn`: For machine learning models, data preprocessing, and PCA.
+- `matplotlib`: For optional visualizations and plotting quantum circuits.
+- `numpy`: For handling numerical operations and arrays.
 
-You can install the dependencies using pip:
+You can install the dependencies using:
 
 ```bash
 pip install qiskit scikit-learn matplotlib numpy
