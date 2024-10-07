@@ -8,16 +8,6 @@ This project implements both classical **Machine Learning** techniques and **Qua
 - [Dataset Description](#dataset-description)
 - [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
-- [Running the Project](#running-the-project)
-- [Classical Machine Learning](#classical-machine-learning)
-  - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
-  - [Train-Test Split](#train-test-split)
-- [Quantum Machine Learning](#quantum-machine-learning)
-  - [Quantum Feature Maps](#quantum-feature-maps)
-  - [Parameterized Quantum Circuits](#parameterized-quantum-circuits)
-  - [Statevector Sampler](#statevector-sampler)
-- [Future Work](#future-work)
-- [License](#license)
 
 ## Project Overview
 
